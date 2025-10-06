@@ -1,0 +1,24 @@
+# ============================================
+# File di test per AT Command Tester (DEMO)
+# Ogni riga è un comando AT da inviare.
+# Le righe che iniziano con # vengono ignorate.
+# Puoi usare anche "comando, commento"
+# ============================================
+
+# --- Test di base ---
+AT
+ATI
+AT+GMR
+
+# --- Test di rete ---
+AT+CSQ          , controllo livello segnale
+AT+CREG?
+
+# --- Test errori simulati ---
+ERROR           , genera risposta di errore
+AT+TESTERR      , +CME ERROR simulato (solo in DEMO)
+
+# --- Test SMS ---
+AT+CMGF=1
+AT+CMGS="+391234567890"
+# (il mock risponderà con '> ' per simulare l'invio di un SMS)
