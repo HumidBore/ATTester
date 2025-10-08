@@ -9,7 +9,7 @@ except ImportError:
     list_ports = None
 
 READ_TIMEOUT_S = 0.2
-IDLE_GAP_S = 0.35
+IDLE_GAP_S = 1  # aumentare per dare tempo alla risposta dopo l’echo
 EOL = "\n"
 
 from .base_backend import ATBackend
