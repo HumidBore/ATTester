@@ -246,8 +246,6 @@ class ATTesterApp(ttk.Frame):
                     line = line.strip()
                     if not line or line.startswith('#'):
                         continue
-                    if ',' in line:
-                        cmd = line.split(',', 1)[0].strip()
                     else:
                         cmd = line
                     cmds.append(cmd)

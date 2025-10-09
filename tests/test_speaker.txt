@@ -1,0 +1,11 @@
+# Commands used:
+# AT+CCMXPLAY=<file_name>,<play_path>,<repeat>
+
+# <file_name> The name of audio file. Support audio file format amr, wav ,mp3 and pcm. 
+# <play_path> 0 local path
+#             1 remote path (just support voice call)
+# <repeat> 0 don’t play repeat. Play only once. 1…255 play repeat times. E.g. <repeat>=1, audio will play twice.
+
+# --- TEST SPEAKER ---
+# Riproduci il file di ring in locale (play_path=0) ripetendolo 5 volte (repeat + 1). Schema comando: AT+CCMXPLAY=<file_name>,<play_path>,<repeat>
+AT+CCMXPLAY="c:/iPhone_Ring.mp3",0,4

@@ -1,0 +1,10 @@
+# --- TEST RECORDING AND PLAYBACK ---
+
+# Registra in locale 
+AT+CREC=1,"c:/recording_to_play.wav"
+
+# Interrompi registrazione. 
+AT+CREC=0
+
+# Riproduci il file registrato in locale (play_path=0) ripetendolo 5 volte (repeat + 1)
+AT+CCMXPLAY="c:/recording_to_play.wav",0,4

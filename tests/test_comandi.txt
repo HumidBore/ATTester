@@ -1,8 +1,7 @@
 # ============================================
 # File di test per AT Command Tester (DEMO)
 # Ogni riga è un comando AT da inviare.
-# Le righe che iniziano con # vengono ignorate.
-# Puoi usare anche "comando, commento"
+# Le righe che iniziano con # o sono vuote vengono ignorate.
 # ============================================
 
 # --- Test di base ---
@@ -11,12 +10,12 @@ ATI
 AT+GMR
 
 # --- Test di rete ---
-AT+CSQ          , controllo livello segnale
+AT+CSQ
 AT+CREG?
 
 # --- Test errori simulati ---
-ERROR           , genera risposta di errore
-AT+TESTERR      , +CME ERROR simulato (solo in DEMO)
+ERROR
+AT+TESTERR
 
 # --- Test SMS ---
 AT+CMGF=1

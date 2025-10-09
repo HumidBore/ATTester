@@ -1,0 +1,21 @@
+# Commands used:
+
+# AT+CREC=<record_path>,<file_ name>
+# AT+CREC=<mode>
+
+# <record_path> 1 local path
+#               2 remote path (get voice from cs call)
+#               3 mixd (local and remote)
+# <file_name> The name of wav/amr audio file.(MAX is 60 bytes)
+# <status>  0 free
+#           1 busy
+# <mode> 0 stop record
+
+
+
+# --- TEST RECORDING ---
+# Registra in locale 
+AT+CREC=1,"c:/recording.wav"
+
+# Interrompi registrazione. 
+AT+CREC=0
